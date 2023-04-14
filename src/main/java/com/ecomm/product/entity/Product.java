@@ -1,9 +1,12 @@
 package com.ecomm.product.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +28,12 @@ public class Product {
 	private long brand_id;
 	@Column(name="rating")
 	private String rating;
+	@Transient
+	private String brandName;
+	@Transient
+	private List<Sku> skus;
+	
+	
 	
 
 }
