@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 public class Size {
 	
-	private String sizeId;
-	private String sizeName;
+	private String id;
+	private String name;
 
 }

@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.data.annotation.Transient;
+import javax.persistence.Transient;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,17 +23,19 @@ public class Sku {
 	@Id
 	
 	@Column(name="sku_Id")
-	private String skuId;
+	private int skuId;
 	
 	@Column(name="sku_Name")
-	
 	private String skuName;
+	
 	@Column(name="color_id")
-	private String colorId;
+	private int colorId;
+	
 	@Transient
 	private String colorName;
+	
 	@Column(name="size_Id")
-	private String sizeID;
+	private int sizeID;
 	@Transient
 	private String sizeName;
 	
